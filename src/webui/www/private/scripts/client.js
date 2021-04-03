@@ -1176,11 +1176,11 @@ function registerMagnetHandler() {
 
 function handleDownloadParam() {
     // Extract torrent URL from download param in WebUI URL hash
-    const downloadHash = "#download=";
-    if (location.hash.indexOf(downloadHash) !== 0)
+    let hashParams = getHashParamsFromUrl();
+    let url = hashParams.download;
+    if (!url)
         return;
 
-    const url = location.hash.substring(downloadHash.length);
     // Remove the processed hash from the URL
     history.replaceState('', document.title, (location.pathname + location.search));
     showDownloadPage([url]);

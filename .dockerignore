@@ -1,0 +1,8 @@
+*
+
+!src/
+!cmake/
+!dist/
+!doc/
+
+!CMakeLists.txt

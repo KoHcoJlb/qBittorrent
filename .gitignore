@@ -40,7 +40,11 @@ src/icons/skin/build-icons/icons/*.png
 
 # CMake build directory
 build/
+cmake-build-debug-*/
 
 # Web UI tools
 node_modules
 package-lock.json
+
+# Intellij IDEA
+.idea/

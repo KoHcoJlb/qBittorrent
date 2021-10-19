@@ -17,4 +17,4 @@ FROM alpine:3.14
 RUN apk add --no-cache boost openssl zlib qt5-qtbase qt5-qttools
 COPY --from=build /install/ /
 
-ENTRYPOINT qbittorrent-nox --profile=/profile
+ENTRYPOINT qbittorrent-nox
